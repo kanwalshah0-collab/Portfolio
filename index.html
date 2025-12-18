@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,21 +44,39 @@
         transform: translateY(-5px);
         transition: all 0.3s ease;
       }
+      
+      /* Custom Scrollbar for internal containers */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(107, 91, 156, 0.05);
+        border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(107, 91, 156, 0.2);
+        border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: rgba(107, 91, 156, 0.4);
+      }
+
       .text-primary { color: var(--primary-purple); }
       .text-dark { color: var(--text-dark); }
       
-      /* Scrollbar hiding */
-      ::-webkit-scrollbar { width: 0px; background: transparent; }
+      /* Scrollbar hiding for main containers */
+      .scrollbar-hide::-webkit-scrollbar { width: 0px; background: transparent; }
     </style>
   <script type="importmap">
 {
   "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
     "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3",
-    "framer-motion": "https://esm.sh/framer-motion@^12.23.26"
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
   }
 }
 </script>
