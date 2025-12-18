@@ -316,11 +316,10 @@ const CoreCompetencies = ({ isActive }: { isActive: boolean }) => {
 
 const Experience = ({ isActive }: { isActive: boolean }) => {
   const jobs = [
-    { date: "2025", role: "Senior PM", company: "Tech Alphalogix", desc: "Leading AI chatbot & LMS platform development using RAG tech. Optimized user engagement by 70%." },
-    { date: "2024", role: "Senior PM", company: "Motive", desc: "Spearheaded UK & Mexico expansion. Increased adoption by 27% and scaled local operations." },
-    { date: "2022", role: "Compliance PM", company: "Royal Cyber", desc: "Led SOC 2 & GDPR SaaS products. Automated compliance workflows saving 10% operational costs." },
-    { date: "2022", role: "Product Manager, Ride Hailing", company: "Bykea", desc: "Reduced match time by 76% (4.2m to 1m) and managed driver-side platform operations and safety initiatives." },
-    { date: "2019", role: "Product Manager, Ride Hailing", company: "Bykea", desc: "Led driver partner ecosystem redesign. Optimized matching algorithms reducing idle time by 40%." }
+    { date: "2025", role: "Senior Product Manager", company: "Tech Alphalogix", desc: "Leading AI chatbot & LMS platform development using RAG tech. Optimized user engagement by 70%." },
+    { date: "2024", role: "Senior Product Manager, International Expansion", company: "Motive", desc: "Spearheaded UK & Mexico expansion. Increased adoption by 27% and scaled local operations." },
+    { date: "2022", role: "Compliance Product Manager", company: "Royal Cyber", desc: "Led SOC 2 & GDPR SaaS products. Automated compliance workflows saving 10% operational costs." },
+    { date: "2022", role: "Product Manager, Ride Hailing", company: "Bykea", desc: "Reduced match time by 76% (4.2m to 1m) and managed driver-side platform operations and safety initiatives." }
   ];
 
   return (
