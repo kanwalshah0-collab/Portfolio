@@ -270,11 +270,13 @@ const AboutMe = ({ isActive }: { isActive: boolean }) => (
 const CoreCompetencies = ({ isActive }: { isActive: boolean }) => {
   const skills = [
     { title: "Product Strategy", desc: "Defining vision and roadmaps aligned with business goals.", icon: Briefcase },
-    { title: "Agile Leadership", desc: "Optimizing sprint velocities and leading cross-functional teams.", icon: Zap },
+    { title: "Funnel Optimization", desc: "Enhancing user journeys to maximize conversion rates and retention.", icon: BarChart },
+    { title: "Design Thinking", desc: "Solving complex problems through empathy and iterative prototyping.", icon: Brain },
+    { title: "GenAI & RAG", desc: "Implementing LLMs for smarter, context-aware product solutions.", icon: Zap },
+    { title: "Rapid Prototyping", desc: "Quickly turning ideas into interactive models to validate assumptions.", icon: Layers },
+    { title: "Vibe Coding", desc: "Harmonizing aesthetic excellence with efficient, high-quality development.", icon: Code },
     { title: "UX Research", desc: "Deep diving into user behaviors through qualitative analysis.", icon: Users },
-    { title: "GenAI & RAG", desc: "Implementing LLMs for smarter product solutions.", icon: Brain },
-    { title: "Technical Tools", desc: "Proficiency in JIRA, Figma, Mixpanel, and Prototyping.", icon: Code },
-    { title: "Data Analytics", desc: "Leveraging Tableau and Heap for data-driven decisions.", icon: BarChart },
+    { title: "Agile Leadership", desc: "Optimizing sprint velocities and leading cross-functional teams.", icon: Award },
   ];
 
   return (
@@ -289,22 +291,22 @@ const CoreCompetencies = ({ isActive }: { isActive: boolean }) => {
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 overflow-y-auto md:overflow-visible pr-2 max-h-[60vh] md:max-h-none custom-scrollbar" onWheel={e => e.stopPropagation()}>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 overflow-y-auto md:overflow-visible pr-2 max-h-[60vh] md:max-h-none custom-scrollbar" onWheel={e => e.stopPropagation()}>
         {skills.map((skill, idx) => (
           <motion.div
             key={idx}
             initial={{ opacity: 0, y: 30 }}
             animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.5, delay: idx * 0.1 }}
-            className="glass-card p-4 md:p-6 rounded-xl md:rounded-2xl group"
+            className="glass-card p-4 md:p-5 rounded-xl md:rounded-2xl group"
           >
-            <div className="flex items-center gap-3 mb-2 md:mb-4">
-              <div className="p-2 md:p-3 bg-[#F8F7FC] text-[#6B5B9C] rounded-lg border border-[#6B5B9C]/20">
-                <skill.icon size={20} />
+            <div className="flex items-center gap-3 mb-2 md:mb-3">
+              <div className="p-2 md:p-2.5 bg-[#F8F7FC] text-[#6B5B9C] rounded-lg border border-[#6B5B9C]/20">
+                <skill.icon size={18} />
               </div>
-              <h3 className="text-base md:text-xl font-['Space_Grotesk'] font-bold text-[#2D2645]">{skill.title}</h3>
+              <h3 className="text-sm md:text-lg font-['Space_Grotesk'] font-bold text-[#2D2645] leading-tight">{skill.title}</h3>
             </div>
-            <p className="text-[12px] md:text-sm leading-relaxed text-[#4A3C75]">
+            <p className="text-[11px] md:text-[13px] leading-relaxed text-[#4A3C75]">
               {skill.desc}
             </p>
           </motion.div>
